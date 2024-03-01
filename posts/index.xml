@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Blog</title>
+    <link>https://blog.lzc.app/posts/</link>
+    <description>Recent content in Posts on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 08 Sep 2023 22:28:47 +0800</lastBuildDate>
+    <atom:link href="https://blog.lzc.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo快速开始（Windows）</title>
+      <link>https://blog.lzc.app/posts/1694183324/</link>
+      <pubDate>Fri, 08 Sep 2023 22:28:47 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694183324/</guid>
+      <description>安装Chocolatey Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;)) 安装Hugo choco install hugo-extended 创建站点 hugo new site blog 添加主题 cd blog git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo &amp;#34;theme = &amp;#39;ananke&amp;#39;&amp;#34; &amp;gt;&amp;gt; hugo.toml 添加内容 hugo new posts/my-first-post.md 启动Hugo服务器（预览内容） hugo server --buildDrafts 生成静态站点 hugo --buildDrafts 生成的静态站点在public目录下。</description>
+    </item>
+    <item>
+      <title>Raspberry Pi OS更换为阿里云源</title>
+      <link>https://blog.lzc.app/posts/1694182788/</link>
+      <pubDate>Fri, 08 Sep 2023 22:21:26 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694182788/</guid>
+      <description>Debian源 编辑/etc/apt/sources.list文件：&#xA;sudo nano /etc/apt/sources.list 将文件内容替换为：&#xA;deb https://mirrors.aliyun.com/debian/ bullseye main non-free contrib deb-src https://mirrors.aliyun.com/debian/ bullseye main non-free contrib deb https://mirrors.aliyun.com/debian-security/ bullseye-security main deb-src https://mirrors.aliyun.com/debian-security/ bullseye-security main deb https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib deb-src https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib deb-src https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib Raspberry Pi OS源 编辑/etc/apt/sources.list.d/raspi.list文件：&#xA;sudo nano /etc/apt/sources.list.d/raspi.list 将文件内容替换为：&#xA;deb http://mirrors.aliyun.com/raspberrypi/ bullseye main deb-src http://mirrors.aliyun.com/raspberrypi/ bullseye main </description>
+    </item>
+    <item>
+      <title>入手新游戏手柄：飞智冰原狼</title>
+      <link>https://blog.lzc.app/posts/1694145669/</link>
+      <pubDate>Fri, 08 Sep 2023 12:01:17 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694145669/</guid>
+      <description>Gamepad Tester:</description>
+    </item>
+    <item>
+      <title>VS Code修复Latex Workshop报错</title>
+      <link>https://blog.lzc.app/posts/1694145575/</link>
+      <pubDate>Fri, 08 Sep 2023 11:59:46 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694145575/</guid>
+      <description>当文档是XeTeX时，会频繁出现Recipe terminated with error. Retry building the project的报错.&#xA;修改Latex Workshop插件的settings.json文件为：&#xA;{ // Latex workshop &amp;#34;latex-workshop.latex.tools&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;latexmk&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;latexmk&amp;#34;, &amp;#34;args&amp;#34;: [ &amp;#34;-synctex=1&amp;#34;, &amp;#34;-interaction=nonstopmode&amp;#34;, &amp;#34;-file-line-error&amp;#34;, &amp;#34;-pdf&amp;#34;, &amp;#34;%DOC%&amp;#34; ] }, { &amp;#34;name&amp;#34;: &amp;#34;xelatex&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;xelatex&amp;#34;, &amp;#34;args&amp;#34;: [ &amp;#34;-synctex=1&amp;#34;, &amp;#34;-interaction=nonstopmode&amp;#34;, &amp;#34;-file-line-error&amp;#34;, &amp;#34;%DOC%&amp;#34; ] }, { &amp;#34;name&amp;#34;: &amp;#34;pdflatex&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;pdflatex&amp;#34;, &amp;#34;args&amp;#34;: [ &amp;#34;-synctex=1&amp;#34;, &amp;#34;-interaction=nonstopmode&amp;#34;, &amp;#34;-file-line-error&amp;#34;, &amp;#34;%DOC%&amp;#34; ] }, { &amp;#34;name&amp;#34;: &amp;#34;bibtex&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;bibtex&amp;#34;, &amp;#34;args&amp;#34;: [ &amp;#34;%DOCFILE%&amp;#34; ] } ], &amp;#34;latex-workshop.latex.recipes&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;xelatex&amp;#34;, &amp;#34;tools&amp;#34;: [ &amp;#34;xelatex&amp;#34; ] }, { &amp;#34;name&amp;#34;: &amp;#34;latexmk&amp;#34;, &amp;#34;tools&amp;#34;: [ &amp;#34;latexmk&amp;#34; ] }, { &amp;#34;name&amp;#34;: &amp;#34;pdflatex -&amp;gt; bibtex -&amp;gt; pdflatex*2&amp;#34;, &amp;#34;tools&amp;#34;: [ &amp;#34;pdflatex&amp;#34;, &amp;#34;bibtex&amp;#34;, &amp;#34;pdflatex&amp;#34;, &amp;#34;pdflatex&amp;#34; ] } ], &amp;#34;latex-workshop.</description>
+    </item>
+    <item>
+      <title>配置Nginx解决跨域问题</title>
+      <link>https://blog.lzc.app/posts/1694145390/</link>
+      <pubDate>Fri, 08 Sep 2023 11:56:40 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694145390/</guid>
+      <description>&#xA;在网站配置中加入：&#xA;location / {&#xD;add_header Access-Control-Allow-Origin *;&#xD;add_header Access-Control-Allow-Methods &amp;#39;GET, POST, OPTIONS&amp;#39;;&#xD;add_header Access-Control-Allow-Headers &amp;#39;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&amp;#39;;&#xD;} </description>
+    </item>
+    <item>
+      <title>宝塔面板设置FTP的SSL证书</title>
+      <link>https://blog.lzc.app/posts/1694145142/</link>
+      <pubDate>Fri, 08 Sep 2023 11:52:30 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694145142/</guid>
+      <description>默认下，宝塔面板的FTP证书是自签名的证书。&#xA;我们可以把它替换成我们的SSL证书。&#xA;先备份Pure-FTPd的证书文件：&#xA;mv /etc/ssl/private/pure-ftpd.pem /etc/ssl/private/pure-ftpd.pem.bak&#xA;将我们的证书写入（私钥在上，公钥在下）：&#xA;nano /etc/ssl/private/pure-ftpd.pem&#xA;-----BEGIN PRIVATE KEY-----&#xD;…&#xD;-----END PRIVATE KEY-----&#xD;-----BEGIN CERTIFICATE-----&#xD;…&#xD;-----END CERTIFICATE-----&#xD;-----BEGIN CERTIFICATE-----&#xD;…&#xD;-----END CERTIFICATE---- 保存后，在宝塔面板 ➡ 软件商店 ➡ Pure-Ftpd管理 ➡ 重启Pure-Ftpd。&#xA;之后再连接FTP时获取到的就是我们的证书了。</description>
+    </item>
+    <item>
+      <title>winget安装.NET Framework和.NET SDK</title>
+      <link>https://blog.lzc.app/posts/1694145034/</link>
+      <pubDate>Fri, 08 Sep 2023 11:50:38 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694145034/</guid>
+      <description>.NET Framework winget install Microsoft.DotNet.Framework.DeveloperPack_4 -v [4.X.X]&#xA;.NET winget install Microsoft.DotNet.SDK.[X]</description>
+    </item>
+    <item>
+      <title>解决.NET Framework 4.0和4.5等不提供下载的方法</title>
+      <link>https://blog.lzc.app/posts/1694144703/</link>
+      <pubDate>Fri, 08 Sep 2023 11:45:18 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694144703/</guid>
+      <description>许多旧项目还是基于.NET Framework 4.0或4.5等框架，但是微软已经停止支持这些框架并且不再提供下载。&#xA;如果用Visual Studio 2022等比较新的IDE打开，会发现无法加载项目。&#xA;而且定向到的下载页面也不提供.NET Framework 4.0和.NET Framework 4.5的下载链接。&#xA;可以到NuGet Gallery找到你需要的包，点进详细页面后下载。&#xA;用解压缩软件打开下载的包。&#xA;将build/.NETFramework下以版本号命名的文件夹解压到C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework下。&#xA;这时候再打开项目就可以正常加载了。</description>
+    </item>
+    <item>
+      <title>.NET程序发布生成为单文件</title>
+      <link>https://blog.lzc.app/posts/1694144335/</link>
+      <pubDate>Fri, 08 Sep 2023 11:38:59 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694144335/</guid>
+      <description>&amp;ndash;self-contained 为附带运行时（Runtime） dotnet publish -c Release --self-contained -r win-x86 -p:PublishSingleFile=true -p:DebugType=none -p:PublishTrimmed=true -p:EnableCompressionInSingleFile=true -o ./publish/x32 &amp;ndash;no-self-contained 为不附带运行时（Runtime） dotnet publish -c Release --no-self-contained -r win-x86 -p:PublishSingleFile=true -p:DebugType=none -o ./publish/x32 </description>
+    </item>
+    <item>
+      <title>HP战66五代酷睿版安装指纹模块</title>
+      <link>https://blog.lzc.app/posts/1694143787/</link>
+      <pubDate>Fri, 08 Sep 2023 11:30:03 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694143787/</guid>
+      <description>购置 惠普战66五代酷睿版是没有配置指纹解锁功能的，但是模具还是通用的、预留了指纹模块的位置。因此我们可以自购一个指纹模块装上去。&#xA;笔者购买的是这款“FM3483/3633”的指纹器，只需要48元。&#xA;安装 先拧开后面的五颗螺丝，用撬片从后面散热孔那里翘就可以打开。&#xA;可以看到指纹模块的位置。&#xA;先打开指纹模块的后盖，取出占位的小塑料壳。&#xA;之后再装上指纹模块就可以了。建议先将电池取下，把指纹模块的排线放在电池下。&#xA;驱动 可以向商家或者驱动软件获取驱动程序，安装之后就可以正常使用了。</description>
+    </item>
+    <item>
+      <title>用clearfix修复float导致的父元素高度塌陷</title>
+      <link>https://blog.lzc.app/posts/1694141898/</link>
+      <pubDate>Fri, 08 Sep 2023 10:59:16 +0800</pubDate>
+      <guid>https://blog.lzc.app/posts/1694141898/</guid>
+      <description>&#xA;可以给父元素容器加上如下的CSS属性：&#xA;.clearfix:after { visibility: hidden; display: block; font-size: 0; content: &amp;#34; &amp;#34;; clear: both; height: 0; } </description>
+    </item>
+  </channel>
+</rss>

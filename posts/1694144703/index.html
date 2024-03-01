@@ -1,0 +1,369 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="zh-cn"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>解决.NET Framework 4.0和4.5等不提供下载的方法 - Blog</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  <meta name="description" content="许多旧项目还是基于.NET Framework 4.0或4.5等框架，但是微软已经停止支持这些框架并且不再提供下载。
+如果用Visual Studio 2022等比较新的IDE打开，会发现无法加载项目。
+而且定向到的下载页面也不提供.NET Framework 4.0和.NET Framework 4.5的下载链接。
+可以到NuGet Gallery找到你需要的包，点进详细页面后下载。
+用解压缩软件打开下载的包。
+将build/.NETFramework下以版本号命名的文件夹解压到C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework下。
+这时候再打开项目就可以正常加载了。" />
+  <meta name="author" content="LZC.app" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://blog.lzc.app/main.min.css" />
+
+  
+
+  
+     
+  <link rel="preload" as="image" href="https://blog.lzc.app/theme.svg" />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://dn-qiniu-avatar.qbox.me/avatar/5e104cfe2c15bff8645eb33fe04bf885?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://blog.lzc.app/github.svg" />
+  
+  <link rel="preload" as="image" href="https://blog.lzc.app/mastodon.svg" />
+  
+  <link rel="preload" as="image" href="https://blog.lzc.app/rss.svg" />
+  
+  
+
+  
+  
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () =>
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          
+          throwOnError : false
+        })
+    );
+</script>
+
+  
+  
+  
+
+  
+  <link rel="icon" href="https://blog.lzc.app/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://blog.lzc.app/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.123.6">
+
+  
+  
+
+  
+  
+  
+  
+  
+  <meta itemprop="name" content="解决.NET Framework 4.0和4.5等不提供下载的方法">
+<meta itemprop="description" content="许多旧项目还是基于.NET Framework 4.0或4.5等框架，但是微软已经停止支持这些框架并且不再提供下载。
+如果用Visual Studio 2022等比较新的IDE打开，会发现无法加载项目。
+而且定向到的下载页面也不提供.NET Framework 4.0和.NET Framework 4.5的下载链接。
+可以到NuGet Gallery找到你需要的包，点进详细页面后下载。
+用解压缩软件打开下载的包。
+将build/.NETFramework下以版本号命名的文件夹解压到C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework下。
+这时候再打开项目就可以正常加载了。"><meta itemprop="datePublished" content="2023-09-08T11:45:18+08:00" />
+<meta itemprop="dateModified" content="2023-09-08T11:45:18+08:00" />
+<meta itemprop="wordCount" content="19">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="解决.NET Framework 4.0和4.5等不提供下载的方法"/>
+<meta name="twitter:description" content="许多旧项目还是基于.NET Framework 4.0或4.5等框架，但是微软已经停止支持这些框架并且不再提供下载。
+如果用Visual Studio 2022等比较新的IDE打开，会发现无法加载项目。
+而且定向到的下载页面也不提供.NET Framework 4.0和.NET Framework 4.5的下载链接。
+可以到NuGet Gallery找到你需要的包，点进详细页面后下载。
+用解压缩软件打开下载的包。
+将build/.NETFramework下以版本号命名的文件夹解压到C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework下。
+这时候再打开项目就可以正常加载了。"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="https://blog.lzc.app/"
+      >Blog</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/lzcapp"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./mastodon.svg)"
+        href="https://mastodon.social/@lzc"
+        target="_blank"
+        rel="me"
+      >
+        mastodon
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="https://blog.lzc.app/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">解决.NET Framework 4.0和4.5等不提供下载的方法</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Sep 8, 2023</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>许多旧项目还是基于.NET Framework 4.0或4.5等框架，但是微软已经停止支持这些框架并且不再提供下载。</p>
+<p>如果用Visual Studio 2022等比较新的IDE打开，会发现无法加载项目。</p>
+<p><img src="/images/2023-08-30_22-07-24.png" alt="无法加载项目"></p>
+<p>而且定向到的下载页面也不提供.NET Framework 4.0和.NET Framework 4.5的下载链接。</p>
+<p><img src="/images/2023-08-30_22-09-27.png" alt="下载页面"></p>
+<p>可以到<a href="https://www.nuget.org/packages?q=Microsoft.NETFramework.ReferenceAssemblies">NuGet Gallery</a>找到你需要的包，点进详细页面后下载。</p>
+<p><img src="/images/2023-08-30_22-20-25.png" alt="NuGet Gallery"></p>
+<p>用解压缩软件打开下载的包。</p>
+<p><img src="/images/2023-08-30_22-21-57.png" alt="解压缩软件"></p>
+<p>将<code>build/.NETFramework</code>下以版本号命名的文件夹解压到<code>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework</code>下。</p>
+<p><img src="/images/2023-08-30_22-08-04.png" alt="解压到"></p>
+<p>这时候再打开项目就可以正常加载了。</p>
+</section>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="https://blog.lzc.app/">Blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>
