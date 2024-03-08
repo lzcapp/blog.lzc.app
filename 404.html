@@ -33,6 +33,7 @@
 
 
 
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #faf8f1"
@@ -56,6 +57,7 @@
   
   
   
+  
   <meta
     name="description"
     content="A personal blog"
@@ -72,16 +74,19 @@
   <link rel="preload stylesheet" as="style" href="https://blog.lzc.app/main.min.css" />
 
   
-
   
-     
+  
+  
+  
   <link rel="preload" as="image" href="https://blog.lzc.app/theme.svg" />
 
   
   
   
   
+  
 
+  
   
   <link rel="preload" as="image" href="https://blog.lzc.app/github.svg" />
   
@@ -91,6 +96,10 @@
   
   
 
+  
+  
+
+  
   
   
   <link
@@ -113,18 +122,18 @@
 ></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () =>
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-          ],
-          
-          throwOnError : false
-        })
-    );
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
 </script>
 
   
@@ -140,18 +149,26 @@
 
   
   
-
-  
-  
   
   
   
   <meta itemprop="name" content="404 Page not found">
 <meta itemprop="description" content="">
   
+  <meta property="og:title" content="404 Page not found" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blog.lzc.app/404.html" />
+
+
+  
   <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="404 Page not found"/>
 <meta name="twitter:description" content=""/>
 
+  
+  
+  
+  <link rel="canonical" href="https://blog.lzc.app/404.html" />
   
   
 </head>
@@ -178,6 +195,7 @@
   ></div>
 
   
+
   <script>
     
     const htmlClass = document.documentElement.classList;

@@ -33,6 +33,7 @@
 
 
 
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #faf8f1"
@@ -55,6 +56,7 @@
   
   
   
+  
   <meta name="description" content="
 在网站配置中加入：
 location / {add_header Access-Control-Allow-Origin *;add_header Access-Control-Allow-Methods &#39;GET, POST, OPTIONS&#39;;add_header Access-Control-Allow-Headers &#39;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&#39;;} " />
@@ -70,16 +72,19 @@ location / {add_header Access-Control-Allow-Origin *;add_header Access-Control
   <link rel="preload stylesheet" as="style" href="https://blog.lzc.app/main.min.css" />
 
   
-
   
-     
+  
+  
+  
   <link rel="preload" as="image" href="https://blog.lzc.app/theme.svg" />
 
   
   
   
   
+  
 
+  
   
   <link rel="preload" as="image" href="https://blog.lzc.app/github.svg" />
   
@@ -89,6 +94,10 @@ location / {add_header Access-Control-Allow-Origin *;add_header Access-Control
   
   
 
+  
+  
+
+  
   
   
   <link
@@ -111,18 +120,18 @@ location / {add_header Access-Control-Allow-Origin *;add_header Access-Control
 ></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () =>
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-          ],
-          
-          throwOnError : false
-        })
-    );
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
 </script>
 
   
@@ -138,9 +147,6 @@ location / {add_header Access-Control-Allow-Origin *;add_header Access-Control
 
   
   
-
-  
-  
   
   
   
@@ -152,11 +158,26 @@ location / {add_header Access-Control-Allow-Origin *;add_header Access-Control
 <meta itemprop="wordCount" content="16">
 <meta itemprop="keywords" content="" />
   
+  <meta property="og:title" content="配置Nginx解决跨域问题" />
+<meta property="og:description" content="
+在网站配置中加入：
+location / {add_header Access-Control-Allow-Origin *;add_header Access-Control-Allow-Methods &#39;GET, POST, OPTIONS&#39;;add_header Access-Control-Allow-Headers &#39;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&#39;;} " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.lzc.app/posts/1694145390/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-08T11:56:40+08:00" />
+<meta property="article:modified_time" content="2023-09-08T11:56:40+08:00" />
+
+
+  
   <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="配置Nginx解决跨域问题"/>
 <meta name="twitter:description" content="
 在网站配置中加入：
 location / {add_header Access-Control-Allow-Origin *;add_header Access-Control-Allow-Methods &#39;GET, POST, OPTIONS&#39;;add_header Access-Control-Allow-Headers &#39;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&#39;;} "/>
 
+  
+  
+  
+  <link rel="canonical" href="https://blog.lzc.app/posts/1694145390/" />
   
   
 </head>
@@ -183,6 +204,7 @@ location / {add_header Access-Control-Allow-Origin *;add_header Access-Control
   ></div>
 
   
+
   <script>
     
     const htmlClass = document.documentElement.classList;
@@ -313,6 +335,11 @@ location / {add_header Access-Control-Allow-Origin *;add_header Access-Control
   
 
   
+  
+
+  
+
+
   
 </article>
 

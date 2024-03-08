@@ -33,6 +33,7 @@
 
 
 
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #faf8f1"
@@ -52,6 +53,7 @@
   
   <meta name="theme-color" />
 
+  
   
   
   
@@ -75,16 +77,19 @@ nano /etc/ssl/private/pure-ftpd.pem
   <link rel="preload stylesheet" as="style" href="https://blog.lzc.app/main.min.css" />
 
   
-
   
-     
+  
+  
+  
   <link rel="preload" as="image" href="https://blog.lzc.app/theme.svg" />
 
   
   
   
   
+  
 
+  
   
   <link rel="preload" as="image" href="https://blog.lzc.app/github.svg" />
   
@@ -94,6 +99,10 @@ nano /etc/ssl/private/pure-ftpd.pem
   
   
 
+  
+  
+
+  
   
   
   <link
@@ -116,18 +125,18 @@ nano /etc/ssl/private/pure-ftpd.pem
 ></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () =>
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-          ],
-          
-          throwOnError : false
-        })
-    );
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
 </script>
 
   
@@ -140,9 +149,6 @@ nano /etc/ssl/private/pure-ftpd.pem
 
   
   <meta name="generator" content="Hugo 0.123.8">
-
-  
-  
 
   
   
@@ -162,6 +168,22 @@ nano /etc/ssl/private/pure-ftpd.pem
 <meta itemprop="wordCount" content="34">
 <meta itemprop="keywords" content="" />
   
+  <meta property="og:title" content="宝塔面板设置FTP的SSL证书" />
+<meta property="og:description" content="默认下，宝塔面板的FTP证书是自签名的证书。
+我们可以把它替换成我们的SSL证书。
+先备份Pure-FTPd的证书文件：
+mv /etc/ssl/private/pure-ftpd.pem /etc/ssl/private/pure-ftpd.pem.bak
+将我们的证书写入（私钥在上，公钥在下）：
+nano /etc/ssl/private/pure-ftpd.pem
+-----BEGIN PRIVATE KEY-----…-----END PRIVATE KEY----------BEGIN CERTIFICATE-----…-----END CERTIFICATE----------BEGIN CERTIFICATE-----…-----END CERTIFICATE---- 保存后，在宝塔面板 ➡ 软件商店 ➡ Pure-Ftpd管理 ➡ 重启Pure-Ftpd。
+之后再连接FTP时获取到的就是我们的证书了。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.lzc.app/posts/1694145142/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-08T11:52:30+08:00" />
+<meta property="article:modified_time" content="2023-09-08T11:52:30+08:00" />
+
+
+  
   <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="宝塔面板设置FTP的SSL证书"/>
 <meta name="twitter:description" content="默认下，宝塔面板的FTP证书是自签名的证书。
 我们可以把它替换成我们的SSL证书。
@@ -172,6 +194,10 @@ nano /etc/ssl/private/pure-ftpd.pem
 -----BEGIN PRIVATE KEY-----…-----END PRIVATE KEY----------BEGIN CERTIFICATE-----…-----END CERTIFICATE----------BEGIN CERTIFICATE-----…-----END CERTIFICATE---- 保存后，在宝塔面板 ➡ 软件商店 ➡ Pure-Ftpd管理 ➡ 重启Pure-Ftpd。
 之后再连接FTP时获取到的就是我们的证书了。"/>
 
+  
+  
+  
+  <link rel="canonical" href="https://blog.lzc.app/posts/1694145142/" />
   
   
 </head>
@@ -198,6 +224,7 @@ nano /etc/ssl/private/pure-ftpd.pem
   ></div>
 
   
+
   <script>
     
     const htmlClass = document.documentElement.classList;
@@ -341,6 +368,11 @@ nano /etc/ssl/private/pure-ftpd.pem
   
 
   
+  
+
+  
+
+
   
 </article>
 
